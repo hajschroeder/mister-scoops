@@ -6,8 +6,10 @@ class IceCreamControl extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      mainIceCreamList : []
     };
+    this.handleClick = this.handleClick.bind 
   }
 
   handleClick = () =>{
@@ -16,14 +18,21 @@ class IceCreamControl extends React.Component {
     }));
   }
 
+  handleAddingNewIceCreamToList = (newIceCream) => {
+    const newMainIceCreamList = this.state.mainIceCreamList.concat(newIceCream);
+    this.setState({
+      mainIceCreamList: newMainIceCreamList,
+      formVisibleOnPage: false
+    });
+  }
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
     if(this.state.formVisibleOnPage) {
-      currentlyVisibleState= <NewIceCreamForm />
+      currentlyVisibleState= <NewIceCreamForm onNewIceCreamCreation={this.handleAddingNewIceCreamToList} />
       buttonText = "Return to the iced creams!"
     } else {
-      currentlyVisibleState = <IceCreamList />  
+      currentlyVisibleState = <IceCreamList iceCreamList={this.state.mainIceCreamList} />  
       buttonText="Add an iced cream!";
     }
     return(
