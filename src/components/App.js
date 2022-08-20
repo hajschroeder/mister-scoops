@@ -1,16 +1,14 @@
 import React from "react";
+import Header from "./Header";
+import IceCreamList from "./IceCreamList";
 
 function App(){
   return (
     <React.Fragment>
-      <h1>Ice Cream Tracker!</h1>
-      <p>name</p>
-      <p><em>origin</em></p>
-      <p><b>price</b></p>
-      <p><em>flavor</em></p>
-      <hr/>
+      <Header />
+      <IceCreamList />
     </React.Fragment>
-  )
+  );
 }
 
 export default App;
