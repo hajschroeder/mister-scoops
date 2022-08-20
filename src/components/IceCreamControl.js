@@ -4,24 +4,32 @@ import IceCreamList from "./IceCreamList";
 
 class IceCreamControl extends React.Component {
   constructor(props){
+    super(props);
     this.state = {
       formVisibleOnPage: false
     };
   }
 
-  render(){
+  handleClick = () =>{
+    this.setState(prevState => ({
+      formVisibleOnPage: !prevState.formVisibleOnPage
+    }));
+  }
+
+  render() {
     let currentlyVisibleState = null;
-    let addIceCreamButton = null;
+    let buttonText = null;
     if(this.state.formVisibleOnPage) {
       currentlyVisibleState= <NewIceCreamForm />
+      buttonText = "Return to the iced creams!"
     } else {
       currentlyVisibleState = <IceCreamList />  
-      addIceCreamButton= <button onClick={this.handleClick}>Add A Flavuh!</button>
+      buttonText="Add an iced cream!";
     }
     return(
       <React.Fragment>
         {currentlyVisibleState}
-        {addIceCreamButton}
+        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   }
