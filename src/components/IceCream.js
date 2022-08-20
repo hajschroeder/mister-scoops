@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 function IceCream(props) {
   return (
     <React.Fragment>
-      <Header />
       <p>{props.name}</p>
       <p><em>{props.origin}</em></p>
       <p><b>{props.price}</b></p>
@@ -15,10 +14,10 @@ function IceCream(props) {
 }
 
 IceCream.propTypes= {
-  name: PropTypes.string,
-  origin: PropTypes.string,
-  price: PropTypes.int,
-  flavor: PropTypes.string
+  name: PropTypes.string.isRequired,
+  origin: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  flavor: PropTypes.string.isRequired
 }
 
 export default IceCream;
