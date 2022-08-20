@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./Header";
-import IceCreamList from "./IceCreamList";
+import IceCreamControl from "./IceCreamList";
 
 function App(){
   return (
     <React.Fragment>
       <Header />
-      <IceCreamList />
+      <IceCreamControl />
     </React.Fragment>
   );
 }
