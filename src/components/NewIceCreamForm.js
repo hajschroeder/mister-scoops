@@ -1,6 +1,7 @@
 import React from "react";
 import { v4 } from 'uuid';
 import PropTypes from "prop-types";
+import ReusableForm from "./ReusableForm";
 
 
 
@@ -18,25 +19,9 @@ function NewIceCreamForm(props){
   }
   return (
     <React.Fragment>
-      <form onSubmit={handleNewIceCreamFormSubmission}>
-        <input
-          type='text'
-          name='name'
-          placeholder='Ice Cream Name' />
-        <input
-          type='text'
-          name='origin'
-          placeholder='Ice Cream Origin' />
-        <input
-          type='text'
-          name='price'
-          placeholder='Ice Cream Price' />
-        <input
-          type='text'
-          name='flavor'
-          placeholder='Ice Cream Flavor' />
-        <button type='submit'>Add the iced cream!</button>
-      </form>
+      <ReusableForm
+        formSubmissionHandler={handleNewIceCreamFormSubmission}
+        buttonText="I am in NICF.js" />
     </React.Fragment>
   )
 }

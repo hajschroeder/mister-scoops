@@ -11,6 +11,7 @@ function IceCreamDetail(props){
       <p><em>{iceCream.origin}</em></p>
       <p><em>${iceCream.price}</em></p>
       <p><em><b>{iceCream.flavor}</b></em></p>
+      <button onClick={ props.onClickingEdit} >Update the creams</button>
       <button onClick={()=> onClickingDelete(iceCream.id)}>Get rid of this Iced Cream</button>
       <hr/>
     </React.Fragment>
@@ -19,7 +20,8 @@ function IceCreamDetail(props){
 
 IceCreamDetail.propTypes = {
   iceCream: PropTypes.object,
-  onClickingDelete: PropTypes.func
+  onClickingDelete: PropTypes.func,
+  onClickingEdit: PropTypes.func
 };
 
 export default IceCreamDetail;

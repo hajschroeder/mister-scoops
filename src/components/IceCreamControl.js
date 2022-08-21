@@ -2,6 +2,8 @@ import React from "react";
 import NewIceCreamForm from "./NewIceCreamForm";
 import IceCreamList from "./IceCreamList";
 import IceCreamDetail from "./IceCreamDetail";
+import EditIceCreamForm from "./EditIceCreamForm";
+
 
 class IceCreamControl extends React.Component {
   constructor(props){
@@ -9,7 +11,8 @@ class IceCreamControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       mainIceCreamList : [],
-      selectedIceCream: null
+      selectedIceCream: null,
+      editing: false 
     };
     this.handleClick = this.handleClick.bind(this); 
   }
@@ -18,7 +21,8 @@ class IceCreamControl extends React.Component {
     if (this.state.selectedIceCream != null) {
       this.setState({
         formVisibleOnPage: false,
-        selectedIceCream: null
+        selectedIceCream: null,
+        editing: false 
       });
     } else{ 
       this.setState(prevState => ({
@@ -48,19 +52,42 @@ class IceCreamControl extends React.Component {
     });
   }
 
+  handleEditClick = () => {
+    console.log("were editing, babyyyyy")
+    this.setState({editing: true});
+  }
+
+  handleEditingIceCreamInList = (iceCreamToEdit) => {
+    const editedMainIceCreamList = this.state.mainIceCreamList.filter(iceCream => iceCream.id !== this.state.selectedIceCream.id).concat(iceCreamToEdit);
+    this.setState({
+      mainIceCreamList: editedMainIceCreamList,
+      editing: false,
+      selectedIceCream: null
+    });
+  }
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-
-    if(this.state.selectedIceCream != null) {
-      currentlyVisibleState= <IceCreamDetail iceCream = {this.state.selectedIceCream} onClickingDelete = {this.handleDeletingIceCream} />
+    
+    if (this.state.editing) {
+      currentlyVisibleState = <EditIceCreamForm iceCream = {this.state.selectedIceCream} onEditIceCream = {this.handleEditingIceCreamInList} />
+      buttonText = "Back to the dreamy creamys"
+    } else if (this.state.selectedIceCream != null) {
+      currentlyVisibleState= 
+      <IceCreamDetail 
+      iceCream = {this.state.selectedIceCream} 
+      onClickingDelete = {this.handleDeletingIceCream} 
+      onClickingEdit = {this.handleEditClick}/>
       buttonText = "Return to the iced creams!" 
-    }
-    else if (this.state.formVisibleOnPage){
-      currentlyVisibleState = <NewIceCreamForm onNewIceCreamCreation={this.handleAddingNewIceCreamToList} />;
+    }else if (this.state.formVisibleOnPage){
+      currentlyVisibleState = <NewIceCreamForm 
+      onNewIceCreamCreation={this.handleAddingNewIceCreamToList} />;
       buttonText = "Return to the iced creams"
     } else {
-      currentlyVisibleState = <IceCreamList iceCreamList={this.state.mainIceCreamList} onIceCreamSelection={this.handleChangingSelectedIceCream}/>  
+      currentlyVisibleState = <IceCreamList 
+      iceCreamList={this.state.mainIceCreamList} 
+      onIceCreamSelection={this.handleChangingSelectedIceCream}/>  
       buttonText="Add an iced cream!";
     }
     return(
