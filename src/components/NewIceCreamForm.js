@@ -13,7 +13,7 @@ function NewIceCreamForm(props){
       origin: event.target.origin.value,
       flavor: event.target.flavor.value,
       price:event.target.price.value,
-      if: v4()
+      id: v4()
     });
   }
   return (
@@ -35,7 +35,7 @@ function NewIceCreamForm(props){
           type='text'
           name='flavor'
           placeholder='Ice Cream Flavor' />
-        <button type='submit'>Button</button>
+        <button type='submit'>Add the iced cream!</button>
       </form>
     </React.Fragment>
   )

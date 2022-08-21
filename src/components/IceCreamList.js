@@ -1,26 +1,28 @@
 import React from "react";
 import IceCream from "./IceCream";
 import PropTypes from "prop-types"
-// import IceCreamControl from "./IceCreamControl";
-
 
 function IceCreamList(props){
   return (
     <React.Fragment>
-      <hr/>
-      {props.iceCreamList.map((iceCream, index) =>
-        <IceCream name={iceCream.name}
+      <hr />
+      {props.iceCreamList.map((iceCream) =>
+        <IceCream 
+          whenIceCreamClicked = { props.onIceCreamSelection }
+          name={iceCream.name}
           origin={iceCream.origin}
           price={iceCream.price}
           flavor={iceCream.flavor}
-          key={index} />
+          id={iceCream.id}
+          key={iceCream.id} />
       )}
     </React.Fragment>
   );
 }
 
 IceCreamList.propTypes = {
-  iceCreamList: PropTypes.array
+  iceCreamList: PropTypes.array,
+  onIceCreamSelection: PropTypes.func
 };
 
 export default IceCreamList
