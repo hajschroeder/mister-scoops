@@ -4,11 +4,13 @@ import PropTypes from "prop-types";
 function IceCream(props) {
   return (
     <React.Fragment>
-      <p>{props.name}</p>
-      <p><em>{props.origin}</em></p>
-      <p><b>{props.price}</b></p>
-      <p><em>{props.flavor}</em></p>
-      <hr/>
+      <div onClick={() => props.whenIceCreamClicked(props.id)}>
+        <p>{props.name}</p>
+        <p><em>{props.origin}</em></p>
+        <p><b>{props.price}</b></p>
+        <p><em>{props.flavor}</em></p>
+        <hr/>
+      </div>
     </React.Fragment>
   );
 }
@@ -16,8 +18,10 @@ function IceCream(props) {
 IceCream.propTypes= {
   name: PropTypes.string.isRequired,
   origin: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  flavor: PropTypes.string.isRequired
-}
+  price: PropTypes.string.isRequired,
+  flavor: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  whenIceCreamClicked: PropTypes.func 
+};
 
 export default IceCream;

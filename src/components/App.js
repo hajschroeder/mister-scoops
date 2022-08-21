@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import IceCreamControl from "./IceCreamList";
+import IceCreamControl from "./IceCreamControl";
 
 function App(){
   return (

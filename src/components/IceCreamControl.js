@@ -53,7 +53,7 @@ class IceCreamControl extends React.Component {
     let buttonText = null;
 
     if(this.state.selectedIceCream != null) {
-      currentlyVisibleState= <IceCreamDetail iceCream = {this.state.selectedIceCream} />
+      currentlyVisibleState= <IceCreamDetail iceCream = {this.state.selectedIceCream} onClickingDelete = {this.handleDeletingIceCream} />
       buttonText = "Return to the iced creams!" 
     }
     else if (this.state.formVisibleOnPage){
