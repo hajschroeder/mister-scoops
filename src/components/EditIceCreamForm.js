@@ -9,9 +9,10 @@ function EditIceCreamForm (props) {
     event.preventDefault();
     props.onEditIceCream({
       name: event.target.name.value,
-      origin: event.target.origin.value,
+      quantity: event.target.quantity.value,
       price: event.target.price.value,
-      flavor: event.target.flavor.value});
+      flavor: event.target.flavor.value,
+      id: iceCream.id});
   }
   return (
     <React.Fragment>

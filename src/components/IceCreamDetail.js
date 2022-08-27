@@ -8,7 +8,7 @@ function IceCreamDetail(props){
     <React.Fragment>
       <h1>Ice Cream Deets</h1>
       <h3>{iceCream.name}</h3>
-      <p><em>{iceCream.origin}</em></p>
+      <p><em>{iceCream.quantity}</em></p>
       <p><em>${iceCream.price}</em></p>
       <p><em><b>{iceCream.flavor}</b></em></p>
       <button onClick={ props.onClickingEdit} >Update the creams</button>

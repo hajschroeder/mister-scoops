@@ -10,7 +10,7 @@ function IceCreamList(props){
         <IceCream 
           whenIceCreamClicked = { props.onIceCreamSelection }
           name={iceCream.name}
-          origin={iceCream.origin}
+          quantity={iceCream.quantity}
           price={iceCream.price}
           flavor={iceCream.flavor}
           id={iceCream.id}

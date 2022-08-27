@@ -6,8 +6,8 @@ function IceCream(props) {
     <React.Fragment>
       <div onClick={() => props.whenIceCreamClicked(props.id)}>
         <p>{props.name}</p>
-        <p><em>{props.origin}</em></p>
-        <p><b>{props.price}</b></p>
+        <p><em>{props.quantity}</em></p>
+        <p><b>${props.price}</b></p>
         <p><em>{props.flavor}</em></p>
         <hr/>
       </div>
@@ -17,7 +17,7 @@ function IceCream(props) {
 
 IceCream.propTypes= {
   name: PropTypes.string.isRequired,
-  origin: PropTypes.string.isRequired,
+  quantity: PropTypes.number.isRequired,
   price: PropTypes.string.isRequired,
   flavor: PropTypes.string.isRequired,
   id: PropTypes.string,

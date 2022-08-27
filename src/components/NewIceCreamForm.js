@@ -11,7 +11,7 @@ function NewIceCreamForm(props){
     event.preventDefault();
     props.onNewIceCreamCreation({
       name: event.target.name.value,
-      origin: event.target.origin.value,
+      quantity: event.target.quantity.value,
       flavor: event.target.flavor.value,
       price:event.target.price.value,
       id: v4()
