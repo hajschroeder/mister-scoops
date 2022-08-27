@@ -53,7 +53,6 @@ class IceCreamControl extends React.Component {
   }
 
   handleEditClick = () => {
-    console.log("were editing, babyyyyy")
     this.setState({editing: true});
   }
 
@@ -66,6 +65,12 @@ class IceCreamControl extends React.Component {
     });
   }
 
+  handleDecrementingIceCream = (id) => {
+    const decrementInventory = this.state.mainIceCreamList.filter(iceCream => iceCream.id === id)[0];
+    if(decrementInventory.quantity > 0) {
+      decrementInventory.quantity -= 1
+    }
+  }
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -78,7 +83,8 @@ class IceCreamControl extends React.Component {
       <IceCreamDetail 
       iceCream = {this.state.selectedIceCream} 
       onClickingDelete = {this.handleDeletingIceCream} 
-      onClickingEdit = {this.handleEditClick}/>
+      onClickingEdit = {this.handleEditClick}
+      onClickingDecrement = {this.handleDecrementingIceCream}/>
       buttonText = "Return to the iced creams!" 
     }else if (this.state.formVisibleOnPage){
       currentlyVisibleState = <NewIceCreamForm 

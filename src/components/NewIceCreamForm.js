@@ -11,9 +11,9 @@ function NewIceCreamForm(props){
     event.preventDefault();
     props.onNewIceCreamCreation({
       name: event.target.name.value,
-      quantity: event.target.quantity.value,
       flavor: event.target.flavor.value,
       price:event.target.price.value,
+      quantity: parseInt(130),
       id: v4()
     });
   }

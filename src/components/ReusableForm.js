@@ -9,10 +9,7 @@ function ReusableForm(props) {
           type='text'
           name='name'
           placeholder='Ice Cream Name' />
-        <input
-          type='text'
-          name='quantity'
-          placeholder='Ice Cream Quantity' />
+
         <input
           type='text'
           name='price'

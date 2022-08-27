@@ -9,9 +9,9 @@ function EditIceCreamForm (props) {
     event.preventDefault();
     props.onEditIceCream({
       name: event.target.name.value,
-      quantity: event.target.quantity.value,
       price: event.target.price.value,
       flavor: event.target.flavor.value,
+      quantity: parseInt(130),
       id: iceCream.id});
   }
   return (

@@ -6,9 +6,9 @@ function IceCream(props) {
     <React.Fragment>
       <div onClick={() => props.whenIceCreamClicked(props.id)}>
         <p>{props.name}</p>
-        <p><em>{props.quantity}</em></p>
+        <p><em>Flavor: {props.flavor}</em></p>
         <p><b>${props.price}</b></p>
-        <p><em>{props.flavor}</em></p>
+        <p><em>In Stock: {props.quantity}</em></p>
         <hr/>
       </div>
     </React.Fragment>
@@ -17,7 +17,6 @@ function IceCream(props) {
 
 IceCream.propTypes= {
   name: PropTypes.string.isRequired,
-  quantity: PropTypes.number.isRequired,
   price: PropTypes.string.isRequired,
   flavor: PropTypes.string.isRequired,
   id: PropTypes.string,
