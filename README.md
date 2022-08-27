@@ -21,7 +21,7 @@
 
 ## Description
 
-This is an independant project for the coding school Epicodus. The intent is for the author to display their understanding of React fundamentals. The project serves as an inventory tracker for a small business. A user may view all items available for purchase, add items to the inventory, and increment or decrement the quantity as needed. Additionally, users may update changes to the inventory items. For instance, if the price goes up, they may adjust the displayed price, etc. 
+This is an independant project for the coding school Epicodus. The intent is for the author to display their understanding of React fundamentals. The project serves as an inventory tracker for a small business. A user may view all items available for purchase, add items to the inventory, and decrement the quantity as needed. Additionally, users may update changes to the inventory items. For instance, if the price goes up, they may adjust the displayed price, etc. 
 
 ---
 
