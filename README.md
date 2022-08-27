@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# _Ice Cream Shop Inventory Tracker_
+### version 1.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Contributer
+* Hans Schroeder
 
-## Available Scripts
+### The Site
+* [View the raw documents on GitHub](https://github.com/hajschroeder/mister-scoops)
+---
 
-In the project directory, you can run:
+## Technologies Used
+* HP Laptop with Windows 10
+* GitBash and GitHub
+* VS Code
+* JavaScript
+* React 
+* npm
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Description
 
-### `npm test`
+This is an independant project for the coding school Epicodus. The intent is for the author to display their understanding of React fundamentals. The project serves as an inventory tracker for a small business. A user may view all items available for purchase, add items to the inventory, and increment or decrement the quantity as needed. Additionally, users may update changes to the inventory items. For instance, if the price goes up, they may adjust the displayed price, etc. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup/Installation
+* Navigate to https://github.com/hajschroeder/mister-scoops
+* Clone this repository to your local device
+* Using a terminal, CD into the directory and run `npm install`
+* Start the server by running `npm start`
+* If the browser does not automatically open, navigate to `localhost:3000` and start playing with Ice Cream inventory!!
+___
 
-### `npm run build`
+## Known Bugs
+No known bugs.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## License 
+[MIT](https://choosealicense.com/licenses/mit/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Copyright
+Hans J Schroeder 2022
